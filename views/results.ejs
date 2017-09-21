@@ -1,0 +1,41 @@
+<% include partials/header.ejs %>
+  <div class="ui container">
+    <div class="ui segment" id="results-segment">
+      <h1 class="ui header">Results</h1>
+
+      <div class="ui stackable grid">
+        <% data["data"].forEach(function(strain) { %>
+          <div class="four wide column">
+          <div class="ui card">
+            <div class="content">
+              <div class="header"><%= strain["name"] %></div>
+              <div class="meta">
+                <% var url = strain["url"] %>
+                <a href="<%= url %>">Learn More</a>
+              </div>
+              <div class="description">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum reprehenderit velit nisi suscipit dicta error sed ab alias nulla iusto!
+              </div>
+            </div>
+            <div class="extra content">
+              <span class="right floated">
+                <% var updatedLast = strain["updatedAt"]["datetime"]; %>
+                <%= updatedLast.substr(0, 10) %>
+              </span>
+              <span>
+                <i class="database icon"></i>
+                Last updated:
+              </span>
+            </div>
+          </div>
+          </div>
+        <% }); %>
+      </div>
+    </div>
+  </div>
+
+
+  </div>
+
+    <a href="/">Search Again!</a>
+<% include partials/footer.ejs %>

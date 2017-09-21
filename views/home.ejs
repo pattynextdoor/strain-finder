@@ -1,0 +1,22 @@
+<% include partials/header.ejs %>
+<link rel="stylesheet" href="../css/home.css">
+
+<div id="wrap">
+  <div class="ui raised very padded text container segment" id="home-segment">
+    <h1 class="ui header">Search for a strain</h2>
+      <p>Powered by <a href="https://www.cannabisreports.com/api">Cannabis Reports API</a></p>
+    <form action="/results", method="GET">
+      <div class="ui action input">
+        <input type="text" placeholder="Tangie" name="search" required>
+        <button class="ui button">Search</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+      <%# <input type="text" placeholder="search term" name="search">
+      <input type="submit">%>
+
+
+<% include partials/footer.ejs %>
